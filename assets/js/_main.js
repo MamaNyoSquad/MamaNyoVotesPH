@@ -50,7 +50,7 @@ function fetchPartnerFeed() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) { partnerFeed(this); }
   };
-  xhttp.open("GET", "https://thingproxy.freeboard.io/fetch/https://github.com/MamaNyoSquad/MamaNyoVotesPH/raw/refs/heads/xml/partnerFeed.xml", true);
+  xhttp.open("GET", "../xml/partnerFeed.xml", true);
   xhttp.send();
 }
 function partnerFeed(xml) {
@@ -76,7 +76,7 @@ function fetchCOMELECFeed() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) { COMELECFeed(this); }
   };
-  xhttp.open("GET", "https://thingproxy.freeboard.io/fetch/https://github.com/MamaNyoSquad/MamaNyoVotesPH/raw/refs/heads/xml/COMELECFeed.xml", true);
+  xhttp.open("GET", "../xml/COMELECFeed.xml", true);
   xhttp.send();
 }
 function COMELECFeed(xml) {

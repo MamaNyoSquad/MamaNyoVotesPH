@@ -1,0 +1,23 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<COMELEC>
+  <REMIND>
+    <TITLE>Precinct Finder</TITLE>
+    <IMAGE>home-slider-images/2022PrecinctFinder.jpg</IMAGE>
+    <URL>https://precinctfinder.comelec.gov.ph/voter_precinct</URL>
+  </REMIND>
+  <REMIND>
+    <TITLE>Online Voting and Counting System</TITLE>
+    <IMAGE>home-slider-images/OverseasVoting2025_v2.jpg</IMAGE>
+    <URL>https://comelec.gov.ph/?r=OverseasVoting/2025_EOV/2025OVCS</URL>
+  </REMIND>
+  <REMIND>
+    <TITLE>Voter Education</TITLE>
+    <IMAGE>home-slider-images/VoterEd_Banner.jpg</IMAGE>
+    <URL>https://comelec.gov.ph/?r=VoterEd</URL>
+  </REMIND>
+  <REMIND>
+    <TITLE>Gun Ban</TITLE>
+    <IMAGE>home-slider-images/GunBan2025.jpg</IMAGE>
+    <URL>https://comelec.gov.ph/?r=2025NLE/GunBan</URL>
+  </REMIND>
+</COMELEC>
