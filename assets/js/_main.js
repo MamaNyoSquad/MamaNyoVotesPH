@@ -57,7 +57,7 @@ function partnerFeed(xml) {
   let out = "",
    xmlDoc = xml.responseXML,
    t = xmlDoc.getElementsByTagName("NEWS");
-  for (let n = 0; n < 4; n++) {
+  for (let n = 0; n < 8; n++) {
     out += `
       <div onclick="window.open('https://abs-cbn.com/${t[n].getElementsByTagName("URL")[0].childNodes[0].nodeValue}')">
         <img src="https://od2-image-api.abs-cbn.com/prod/${t[n].getElementsByTagName("IMAGE")[0].childNodes[0].nodeValue}" alt="">
