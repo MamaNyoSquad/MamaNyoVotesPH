@@ -1,0 +1,100 @@
+@import url("./fonts.css");
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+}
+
+div > * {
+  margin: 0;
+}
+
+header {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  z-index: 1900;
+  padding: 19px 38px 19px 19px;
+  background: linear-gradient(#06a8ffa0, #00000000);
+}
+.flexNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer {
+  background-color: #000000;
+  padding: 19px 38px;
+  overflow: auto;
+}
+.footerLogos {
+  display: flex;
+  align-items: center;
+}
+.footerLogos > * {
+  display: inline-block;
+  pointer-events: initial;
+  cursor: pointer;
+}
+.footText {
+  font-weight: 200;
+  font-size: small !important;
+  margin: 0 9.5px;
+}
+.footText > [tbmassoc]:link, [tbmassoc]:visited { color: #ffffff; }
+.footText > [tbmassoc]:hover, [tbmassoc]:active { color: #dcc6bb; }
+
+.headerLogo {
+  aspect-ratio: 16 / 6.5;
+  object-fit: cover;
+  /* background-color: black; */
+}
+
+.hero {
+  width: 100vw;
+  padding: 19rem 1.9rem;
+  background-image: url("../images/background.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero > div {
+  width: 50rem;
+  max-width: 100%;
+}
+
+.partnerNetFeed { padding: 0.95rem; }
+#partnerFeed, #COMELECFeed {
+  display: -moz-grid;
+  display: -ms-grid;
+  display: grid;
+  /* gap: 1.9rem; */
+}
+#partnerFeed > div {
+  background-color: #00a551;
+  border: solid 2.85px #ec1c24;
+  border-radius: 1.9rem;
+  cursor: pointer;
+  margin: 0.95rem;
+  overflow: hidden;
+}
+#partnerFeed > div:hover { background-color: #0066b2; }
+#partnerFeed > div > div { padding: 1.9rem; }
+#COMELECFeed > div {
+  background-color: #0038a8;
+  border: solid 2.85px #ffff00;
+  border-radius: 1.9rem;
+  cursor: pointer;
+  margin: 0.95rem;
+  overflow: hidden;
+}
+#COMELECFeed > div:hover { background-color: #012977; }
+#COMELECFeed > div > div { padding: 1.9rem; }
