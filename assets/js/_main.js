@@ -3,7 +3,7 @@
 // js clock code adapted from w3schools.com/js/tryit.asp?filename=tryjs_timing_clock
 // with some improvisations to convert to am/pm format. initially used in G.Mgr's streams.
 function phtClock() {
-  const tD = new Date(new Date().getTime() + diffOffs(9));
+  const tD = new Date(new Date().getTime() + diffOffs(8));
   let hh = tD.getHours(),
     mm = tD.getMinutes(),
     ss = tD.getSeconds();
