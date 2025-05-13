@@ -42,17 +42,17 @@
 }
 
 @media screen and (max-width: 480px) {
-  #partnerFeed, #COMELECFeed { grid-template-columns: 100%; }
+  #partnerFeed, #COMELECFeed, #senateResults { grid-template-columns: 100%; }
 }
 @media screen and (min-width: 480px) {
-  #partnerFeed, #COMELECFeed { grid-template-columns: 50% 50%; }
+  #partnerFeed, #COMELECFeed, #senateResults { grid-template-columns: 50% 50%; }
 }
 @media screen and (min-width: 640px) {
-  #partnerFeed, #COMELECFeed { grid-template-columns: 33.33% 33.33% 33.33%; }
+  #partnerFeed, #COMELECFeed, #senateResults { grid-template-columns: 33.33% 33.33% 33.33%; }
 }
 @media screen and (min-width: 1280px) {
-  #partnerFeed, #COMELECFeed { grid-template-columns: 25% 25% 25% 25%; }
+  #partnerFeed, #COMELECFeed, #senateResults { grid-template-columns: 25% 25% 25% 25%; }
 }
 /* @media screen and (min-width: 1920px) {
-  #partnerFeed, #COMELECFeed { grid-template-columns: 20% 20% 20% 20% 20%; }
+  #partnerFeed, #COMELECFeed, #senateResults { grid-template-columns: 20% 20% 20% 20% 20%; }
 } */

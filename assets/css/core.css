@@ -72,7 +72,7 @@ footer {
 }
 
 .partnerNetFeed { padding: 0.95rem; }
-#partnerFeed, #COMELECFeed {
+#partnerFeed, #COMELECFeed, #senateResults {
   display: -moz-grid;
   display: -ms-grid;
   display: grid;
@@ -98,3 +98,41 @@ footer {
 }
 #COMELECFeed > div:hover { background-color: #012977; }
 #COMELECFeed > div > div { padding: 1.9rem; }
+#senateResults > div {
+  border: solid 2.85px #d4af37;
+  border-radius: 1.9rem;
+  margin: 0.95rem;
+  overflow: hidden;
+  padding: 1.9rem;
+}
+
+button {
+  background-color: #161224;
+  border: solid 2.85px #ff0000;
+  border-radius: 1900px;
+  color: inherit;
+  padding: 11.875px 28.5px;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: center;
+  text-decoration: none;
+  margin: 9.5px 1.9px 28.5px 1.9px;
+  cursor: pointer;
+  -webkit-transition: 0.475s;
+  -moz-transition: 0.475s;
+  -o-transition: 0.475s;
+  transition: 0.475s;
+}
+button:hover {
+  background-color: #ff0000;
+  border: solid 2.85px #06a8ff;
+}
+button:active {
+  background-color: #ffffff;
+  border: solid 2.85px #06a8ff;
+  color: #ff0000;
+  -webkit-transition: 0.19s;
+  -moz-transition: 0.19s;
+  -o-transition: 0.19s;
+  transition: 0.19s;
+}
