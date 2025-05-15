@@ -78,7 +78,8 @@ footer {
   display: grid;
   /* gap: 1.9rem; */
 }
-#partnerFeed > div {
+#partnerFeed > div,
+  .partnerNetFeed > div > button[abscbn] {
   background-color: #00a551;
   border: solid 2.85px #ec1c24;
   border-radius: 1.9rem;
@@ -86,7 +87,8 @@ footer {
   margin: 0.95rem;
   overflow: hidden;
 }
-#partnerFeed > div:hover { background-color: #0066b2; }
+#partnerFeed > div:hover,
+  .partnerNetFeed > div > button[abscbn]:hover { background-color: #0066b2; }
 #partnerFeed > div > div { padding: 1.9rem; }
 #COMELECFeed > div {
   background-color: #0038a8;
@@ -118,10 +120,10 @@ button {
   text-decoration: none;
   margin: 9.5px 1.9px 28.5px 1.9px;
   cursor: pointer;
-  -webkit-transition: 0.475s;
-  -moz-transition: 0.475s;
-  -o-transition: 0.475s;
-  transition: 0.475s;
+  /* -webkit-transition: 0.475s; */
+  /* -moz-transition: 0.475s; */
+  /* -o-transition: 0.475s; */
+  /* transition: 0.475s; */
 }
 button:hover {
   background-color: #ff0000;
