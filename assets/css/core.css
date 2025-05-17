@@ -16,10 +16,10 @@ header {
   position: absolute;
   top: 0;
   z-index: 1900;
-  padding: 19px 38px 19px 19px;
   background: linear-gradient(#06a8ffa0, #00000000);
 }
 .flexNav {
+  padding: 19px 38px 19px 19px;
   display: flex;
   justify-content: space-between;
   align-items: center;

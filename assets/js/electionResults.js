@@ -77,7 +77,7 @@ function countResults() {
     out += `
       <div>
         <h3>${senatorialResults[v].name}</h3>
-        <p>${senatorialResults[v].count.toLocaleString()} votes</p>
+        <!-- <p>${senatorialResults[v].count.toLocaleString()} votes</p> -->
       </div>
     `;
   }
