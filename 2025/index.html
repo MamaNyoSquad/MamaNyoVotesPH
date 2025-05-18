@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="#MamaNyoSquad">
+    <title>#MamaNyoVotesPH: 「We VOTE for the Future」 2025 🗳️</title>
+    <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./assets/favicon.png" type="image/x-icon">
+    <!-- <meta name="og:type" content="website"> -->
+    <!-- <meta name="og:title" content="#MamaNyoVotesPH: 「We VOTE for the Future」 2025 🗳️"> -->
+    <!-- <meta name="og:image" content="https://mamanyosquad.github.io/MamaNyoVotesPH/2025/assets/preview.png"> -->
+    <!-- <meta name="og:url" content="https://mamanyosquad.github.io/MamaNyoVotesPH/2025"> -->
+    <!-- <meta name="og:description" content="Every election period, #MamaNyoSquad brings you the comprehensive look of the political landscape; sourced from our Partner Network -- ABS-CBN."> -->
+    <!-- <meta name="twitter:card" content="summary"> -->
+    <!-- <meta name="twitter:site" content="@MamaNyoSquad"> -->
+    <meta name="theme-color" content="#161224">
+    <meta name="msapplication-TileColor" content="#161224">
+    <meta name="msapplication-navbutton-color" content="#161224">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#161224">
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/css/_main.css" type="text/css" media="all"> <!-- root -->
+    <style type="text/css">
+      /* css args here */
+      @import url("./assets/css/core.css");
+      @import url("./assets/css/responsive.css");
+    </style>
+    <!-- custom js -->
+    <script src="./assets/js/_main.js" type="text/javascript"></script> <!-- root -->
+    <script src="./assets/js/electionResults.js" type="text/javascript"></script> <!-- election results -->
+    <script type="text/javascript">
+      function start() {
+        // start() args here
+        phtClock();
+        fetchPartnerFeed();
+        fetchCOMELECFeed();
+        countResults();
+      }
+    </script>
+    <script type="text/javascript">
+      // js args here
+    </script>
+  </head>
+  <body onload="start()">
+    <header>
+      <div style="padding: 0.475rem; background-color: #ec1c24; color: white; font-size: medium; text-align: center;">
+        <p>#MamaNyoVotesPH: 「We VOTE for the Future」 2025 has officially ended. 🗳️</p>
+      </div>
+      <div class="flexNav">
+        <video class="headerLogo" src="./assets/videos/logo.webm" type="video/webm" muted autoplay loop></video>
+        <h4 id="phtClock"></h4>
+      </div>
+    </header>
+    <iframe
+      style="width: 100vw; height: 100vh;"
+      _src="https://www.youtube-nocookie.com/embed/videoseries?list=PLpHVxNVX3ZfVLU48QbX-ITwsQpLzj6nLF&loop=1&controls=0&autoplay=1&mute=1&rel=0&showinfo=0&modestbranding=1&playsinline=1"
+      src="https://www.youtube-nocookie.com/embed/VLLVkF1Y6BU?loop=1&controls=0&autoplay=1&mute=1&rel=0&showinfo=0&modestbranding=1&playsinline=1"
+      title="#MamaNyoVotesPH: 「We VOTE for the Future」 2025 🗳️"
+      frameborder="0"
+      allow="autoplay">
+    </iframe>
+    <div style="width: 100vw; height: 1rem; background-color: #d4af37;"></div>
+    <div class="partnerNetFeed">
+      <div class="title" style="padding: 0.95rem;">
+        <h2>The Senators-Elect</h2>
+        <!-- <p>as of 15 May 2025 PHT&ensp;&#8226;&ensp;data from ABS-CBN, COMELEC</p> -->
+      </div>
+      <div id="senateResults"></div> <!-- electionResults.js -->
+      <div class="title" style="padding: 0.95rem;">
+        <!-- <button style="margin: 0; border: solid 2.85px #d4af37;" onclick="window.open('https://halalanresults.abs-cbn.com')">Live results</button> -->
+        <button style="margin: 0; border: solid 2.85px #d4af37;" onclick="window.open('https://youtu.be/f0zblvdiXds')">Watch the broadcast</button>
+      </div>
+    </div>
+    <div class="hero">
+      <div>
+        <h1>The comprehensive PH Election Coverage</h1>
+        <br>
+        <p>
+          #MamaNyoSquad is ready to bring the latest news about the Philippine
+          Elections; from the day of the vote and until the winners are decided.
+        </p>
+        <br>
+        <p>
+          With our Partner Network -- ABS-CBN, we will be covering the news throughout
+          the Philippines to keep our Filipinos informed and ready as we begin
+          re-shaping the country's governmental landscape.
+        </p>
+      </div>
+    </div>
+    <div style="width: 100vw; height: 1rem; background: linear-gradient(to right, #ec1c24, #ec1c24 33.33%, #00a551 33.33%, #00a551 66.66%, #0066b2 66.66%, #0066b2)"></div>
+    <div class="partnerNetFeed">
+      <div class="title" style="padding: 0.95rem;">
+        <h2>From our Partner Network</h2>
+        <!-- <img src="./assets/images/abscbn_logo_wide_white.png" alt="" width="142.5px;"> -->
+      </div>
+      <div id="partnerFeed"></div> <!-- partnerFeed.xml -->
+      <div class="title" style="padding: 0.95rem;">
+        <button abscbn style="margin: 0 !important" onclick="window.open('https://abs-cbn.com/news/halalan-2025')">More news</button>
+      </div>
+    </div>
+    <div style="width: 100vw; height: 1rem; background-color: #ffff00;"></div>
+    <div class="partnerNetFeed">
+      <div class="title" style="padding: 0.95rem;">
+        <h2>COMELEC Tips and Reminders</h2>
+        <!-- <img src="./assets/images/abscbn_logo_wide_white.png" alt="" width="142.5px;"> -->
+      </div>
+      <div id="COMELECFeed"></div> <!-- COMELECFeed.xml -->
+    </div>
+    <footer>
+      <div id="footPage">
+        <div class="footerLogos">
+          <img class="foot-MamaNyoSquad" src="/assets/images/logo/MamaNyoSquad_2024.png" title="Visit #MamaNyoSquad" onclick="window.open('/')" oncontextmenu="event.preventDefault()">
+          <img class="foot-ABSCBN" src="./assets/images/abscbn_logo_wide_white.png" title="Visit ABS-CBN News" onclick="window.open('https://abs-cbn.com/news')" oncontextmenu="event.preventDefault()">
+          <img class="foot-COMELEC" src="https://upload.wikimedia.org/wikipedia/commons/7/73/Commission_on_Elections_%28COMELEC%29.svg" title="Visit COMELEC" onclick="window.open('https://comelec.gov.ph')" oncontextmenu="event.preventDefault()">
+        </div>
+        <p class="footText">©2025 #MamaNyoSquad&ensp;&#8226;&ensp;<a tbmassoc rel="noopener noreferrer" href="https://tbmassoc.github.io" target="_blank" title="Visit tbmassoc's website">a proud brand of tbmassoc</a>&ensp;&#8226;&ensp;<a tbmassoc rel="noopener noreferrer" style="cursor: pointer;" onclick="window.location.replace('/policies')" title="Read our Site Policies on how we use assets">Site Policies</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
