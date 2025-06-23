@@ -3,8 +3,8 @@ name: Deploy changes to mamanyosquad.github.io/MamaNyoVotesPH
 
 on:
   # Runs on pushes targeting the default branch
-  push:
-    branches: ["2025"]
+  # push:
+    # branches: ["2025"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
