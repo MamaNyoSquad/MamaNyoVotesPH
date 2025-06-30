@@ -55,8 +55,8 @@ function fetchPartnerFeed() {
 }
 function partnerFeed(xml) {
   let out = "",
-   xmlDoc = xml.responseXML,
-   t = xmlDoc.getElementsByTagName("NEWS");
+    xmlDoc = xml.responseXML,
+    t = xmlDoc.getElementsByTagName("NEWS");
   for (let n = 0; n < 8; n++) {
     out += `
       <div onclick="window.open('https://abs-cbn.com/${t[n].getElementsByTagName("URL")[0].childNodes[0].nodeValue}')">
@@ -81,8 +81,8 @@ function fetchCOMELECFeed() {
 }
 function COMELECFeed(xml) {
   let out = "",
-   xmlDoc = xml.responseXML,
-   t = xmlDoc.getElementsByTagName("REMIND");
+    xmlDoc = xml.responseXML,
+    t = xmlDoc.getElementsByTagName("REMIND");
   for (let n = 0; n < 4; n++) {
     out += `
       <div onclick="window.open('${t[n].getElementsByTagName("URL")[0].childNodes[0].nodeValue}')">
