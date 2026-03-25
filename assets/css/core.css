@@ -7,9 +7,7 @@ img, video, iframe {
   pointer-events: none;
 }
 
-div > * {
-  margin: 0;
-}
+div > * { margin: 0; }
 
 header {
   width: 100vw;
@@ -43,9 +41,9 @@ footer {
   font-weight: 200;
   font-size: small !important;
   margin: 0 9.5px;
+  & a { cursor: pointer; }
 }
-.footText > [tbmassoc]:link, [tbmassoc]:visited { color: #ffffff; }
-.footText > [tbmassoc]:hover, [tbmassoc]:active { color: #dcc6bb; }
+a[onclick="{ window.open('https://tbmassoc.github.io'); }"]:hover { color: #dcc6bb; }
 
 .headerLogo {
   aspect-ratio: 16 / 6.5;
