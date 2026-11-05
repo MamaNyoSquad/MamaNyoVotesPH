@@ -44,18 +44,28 @@ function ampm(ap) {
   }
 }
 
-// workaround: https://www.w3schools.com/xml/ajax_xmlfile.asp 
-function fetchPartnerFeed() {
-  let xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) { partnerFeed(this); }
-  };
-  xhttp.open("GET", "/MamaNyoVotesPH/assets/xml/partnerFeed.xml", true);
-  xhttp.send();
+async function fetchXmlFeed(url) {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Request failed with status ${response.status}: ${url}`);
+  }
+
+  const xmlDoc = new DOMParser().parseFromString(await response.text(), "application/xml");
+  if (xmlDoc.getElementsByTagName("parsererror").length > 0) {
+    throw new Error(`Failed to parse XML feed: ${url}`);
+  }
+
+  return xmlDoc;
 }
-function partnerFeed(xml) {
+async function fetchPartnerFeed() {
+  try {
+    partnerFeed(await fetchXmlFeed("/MamaNyoVotesPH/assets/xml/partnerFeed.xml"));
+  } catch (error) {
+    console.error("Failed to load partner feed:", error);
+  }
+}
+function partnerFeed(xmlDoc) {
   let out = "",
-    xmlDoc = xml.responseXML,
     t = xmlDoc.getElementsByTagName("NEWS");
   for (let n = 0; n < 8; n++) {
     out += `
@@ -71,17 +81,15 @@ function partnerFeed(xml) {
   }
   document.getElementById("partnerFeed").innerHTML = out;
 }
-function fetchCOMELECFeed() {
-  let xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) { COMELECFeed(this); }
-  };
-  xhttp.open("GET", "/MamaNyoVotesPH/assets/xml/COMELECFeed.xml", true);
-  xhttp.send();
+async function fetchCOMELECFeed() {
+  try {
+    COMELECFeed(await fetchXmlFeed("/MamaNyoVotesPH/assets/xml/COMELECFeed.xml"));
+  } catch (error) {
+    console.error("Failed to load COMELEC feed:", error);
+  }
 }
-function COMELECFeed(xml) {
+function COMELECFeed(xmlDoc) {
   let out = "",
-    xmlDoc = xml.responseXML,
     t = xmlDoc.getElementsByTagName("REMIND");
   for (let n = 0; n < 4; n++) {
     out += `
